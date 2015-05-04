@@ -1,6 +1,10 @@
 describe('capture', function(){
-  it('has a title', function(){
+
+  beforeEach(function(){
     browser.get('http://localhost:8080');
+  });
+
+  it('has a title', function(){
     expect(browser.getTitle()).toEqual('Capture');
   });
 
@@ -14,10 +18,11 @@ describe('capture', function(){
   it('can show newest items at the top of the list', function(){
     element(by.model('taskCtrl.loadTask')).sendKeys('A first Task.');
     element(by.className('form__button--submit')).click();
-    element(by.model('taskCtrl.loadTask')).sendKeys('A second Task.');
+    element(by.model('taskCtrl.loadTask')).clear().sendKeys('A second Task.');
     element(by.className('form__button--submit')).click();
-    var tasks = element.all(by.repeater('task in taskCtrl.tasks'));
-    expect(tasks.get(0).getText()).toEqual('A second Task.');
+    element.all(by.className('tasks')).then(function(task){
+      expect(task[0].getText()).toEqual('A second Task.')
+    });
   });
 
 });
