@@ -1,5 +1,7 @@
 #Todo Challenge#
 
+[![Build Status](https://travis-ci.org/RBGeomaticsRob/todo_challenge.svg?branch=master)](https://travis-ci.org/RBGeomaticsRob/todo_challenge)
+
 ##Challenge##
 
 Wk7 Makers Academy Challenge in AngularJS - Build a Todo list as a mini front-end application. You don't have to use a database, the front-end is more important - you can use an appropriate data structure stored somewhere in your JavaScript (this time only!)
@@ -42,6 +44,7 @@ So that I don't have to count
 
 ##Setup##
 Firstly ensure you run `npm install` and `bower install` when inside the root directory to ensure you have all the appropriate dependencies.
+
 ###Running Locally###
 Run `http-server` in the terminal to start a simple terminal and then load a localhost in the browser at the location it suggests. Normally `localhost:8080`
 
