@@ -38,7 +38,7 @@ So I never see them again
 
 MVP Roadmap
 
-- MVP1 - List of tasks that can be added to.
+- MVP1 - Lists tasks added.
 - MVP2 - Ability to change items in the list
 - MVP3 - Ability to mark tasks as done.
 - MVP4 - MVP3 + styling
