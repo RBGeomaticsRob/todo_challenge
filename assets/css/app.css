@@ -6,6 +6,12 @@
   margin-bottom: 0.5em;
 }
 
+.filters__button {
+  width: 15%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 #task {
   width: 100%;
   margin-bottom: 0.5em;

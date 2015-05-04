@@ -11,24 +11,24 @@
     <script src="app/components/captureTasksController.js"></script>
   </head>
   <body ng-controller="CaptureTasksController as taskCtrl">
-    <div class="row">
+    <header class="row">
       <h1 class="col-md-6 col-md-offset-3 header">Capture</h1>
       <h2 class="col-md-6 col-md-offset-3 header header__lower">The repository to allow you to GTD</h2>
-    </div>
-    <div class="row">
+    </header>
+    <userinput class="row">
       <form class="col-md-6 col-md-offset-3">
         <input id="task" type="text" placeholder="I need to ..." ng-model="taskCtrl.loadTask">
         <button class="form__button--submit btn btn-primary" ng-click="taskCtrl.addTask(taskCtrl.loadTask)">Submit</button>
       </form>
-    </div>
-    <div class="row">
+    </userinput>
+    <filters class="row">
       <div class="col-md-6 col-md-offset-3">
-        <button class="form__button--all" ng-click="taskCtrl.filterAll()">All</button>
-        <button class="form__button--active" ng-click="taskCtrl.filterActive()">Active</button>
-        <button class="form__button--complete" ng-click="taskCtrl.filterComplete()">Complete</button>
+        <button class="filters__button filters__button--active btn btn-danger" ng-click="taskCtrl.filterActive()">Active</button>
+        <button class="filters__button filters__button--all btn btn-primary" ng-click="taskCtrl.filterAll()">All</button>
+        <button class="filters__button filters__button--complete btn btn-success" ng-click="taskCtrl.filterComplete()">Complete</button>
       </div>
-    </div>
-    <div class="row" >
+    </filters>
+    <tasks class="row" >
       <ul class="col-md-6 col-md-offset-3 text-center list-unstyled" >
         <li ng-repeat="task in taskCtrl.tasks | filter:taskCtrl.taskFilter">
           <p class="tasks"
@@ -36,6 +36,6 @@
              ng-click="taskCtrl.complete($index)">{{task.desc}}</p>
         </li>
       </ul>
-    </div>
+    </tasks>
   </body>
 </html>

@@ -48,14 +48,14 @@ describe('capture', function(){
     element(by.model('taskCtrl.loadTask')).sendKeys('A first Task.');
     element(by.className('form__button--submit')).click();
     element(by.className('tasks')).click();
-    element(by.className('form__button--active')).click();
+    element(by.className('filters__button--active')).click();
     expect(element(by.css('.tasks')).isPresent()).toBe(false);
   });
 
   it('can display only the completed tasks',function(){
     element(by.model('taskCtrl.loadTask')).sendKeys('A first Task.');
     element(by.className('form__button--submit')).click();
-    element(by.className('form__button--complete')).click();
+    element(by.className('filters__button--complete')).click();
     expect(element(by.css('.tasks')).isPresent()).toBe(false);
   });
 
@@ -63,8 +63,8 @@ describe('capture', function(){
     element(by.model('taskCtrl.loadTask')).sendKeys('A first Task.');
     element(by.className('form__button--submit')).click();
     element(by.className('tasks')).click();
-    element(by.className('form__button--active')).click();
-    element(by.className('form__button--all')).click();
+    element(by.className('filters__button--active')).click();
+    element(by.className('filters__button--all')).click();
     expect(element(by.css('.tasks')).isPresent()).toBe(true);
   });
 

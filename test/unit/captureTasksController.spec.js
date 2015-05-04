@@ -49,4 +49,6 @@ describe('CaptureTasksController', function(){
     ctrl.filterAll();
     expect(ctrl.taskFilter).toEqual({})
   });
+
+
 });
