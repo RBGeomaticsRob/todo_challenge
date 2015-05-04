@@ -73,7 +73,7 @@ describe('capture', function(){
     element(by.className('form__button--submit')).click();
     element(by.model('taskCtrl.loadTask')).clear().sendKeys('A second Task.');
     element(by.className('form__button--submit')).click();
-    expect(element(by.className('total')).getText()).toEqual('2 Tasks Outstanding')
+    expect(element(by.className('total')).getText()).toEqual('2 Tasks Outstanding - Click to Complete')
   });
 
 });

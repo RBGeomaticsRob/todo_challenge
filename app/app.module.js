@@ -1,1 +1,1 @@
-var app = angular.module('Capture', ['ngResource']);
+var app = angular.module('Capture', []);
