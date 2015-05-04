@@ -8,6 +8,7 @@
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="app/app.module.js"></script>
+    <script src="app/components/captureTasksController.js"></script>
   </head>
   <body ng-controller="CaptureTasksController as taskCtrl">
     <div class="row">
@@ -17,16 +18,13 @@
     <div class="row">
       <form class="col-md-6 col-md-offset-3">
         <input id="task" type="text" placeholder="I need to ..." ng-model="taskCtrl.loadTask">
-        <button class="form__button--submit btn btn-primary">Submit</button>
+        <button class="form__button--submit btn btn-primary" ng-click="taskCtrl.addTask(taskCtrl.loadTask)">Submit</button>
       </form>
     </div>
-    <div class="row">
-      <ul class="col-md-6 col-md-offset-3 text-center list-unstyled">
-        <li>
-          <p>An item in the list</p>
-        </li>
-        <li>
-          <p>Another item in the list</p>
+    <div class="row" >
+      <ul class="col-md-6 col-md-offset-3 text-center list-unstyled" >
+        <li ng-repeat="task in taskCtrl.tasks">
+          <p>{{task.desc}}</p>
         </li>
       </ul>
     </div>
