@@ -48,4 +48,10 @@ MVP Roadmap
 Branding
 'Capture' your GTD tasks ready for processing.
 
+For testing
+karma start test/unit/karma.conf.js
+webdriver-manager start
+http-server
+
+
 

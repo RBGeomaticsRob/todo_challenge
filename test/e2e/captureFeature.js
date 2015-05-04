@@ -68,4 +68,12 @@ describe('capture', function(){
     expect(element(by.css('.tasks')).isPresent()).toBe(true);
   });
 
+  it('displays the total tasks outstanding', function(){
+    element(by.model('taskCtrl.loadTask')).sendKeys('A first Task.');
+    element(by.className('form__button--submit')).click();
+    element(by.model('taskCtrl.loadTask')).clear().sendKeys('A second Task.');
+    element(by.className('form__button--submit')).click();
+    expect(element(by.className('total')).getText()).toEqual('2 Tasks Outstanding')
+  });
+
 });

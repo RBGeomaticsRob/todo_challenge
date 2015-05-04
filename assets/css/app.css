@@ -7,9 +7,23 @@
 }
 
 .filters__button {
+  text-align: center
+}
+
+.filters__button--active   {
   width: 15%;
-  margin-left: auto;
-  margin-right: auto;
+}
+
+.filters__button--all {
+  width: 15%;
+}
+
+.filters__button--complete {
+  width: 15%;
+}
+
+.total {
+  text-align: center
 }
 
 #task {
@@ -31,3 +45,5 @@
 .strikethrough {
   text-decoration: line-through;
 }
+
+.
