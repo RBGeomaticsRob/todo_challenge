@@ -22,9 +22,16 @@ describe('CaptureTasksController', function(){
     expect(ctrl.tasks[0].createdAt).toEqual(Date.now())
   });
 
-  it('can obtain an index to use for class changing', function(){
+  it('can complete a task', function(){
     ctrl.addTask('A new Task');
     ctrl.complete(0)
     expect(ctrl.tasks[0].completed).toEqual(true)
+  });
+
+  it('can reverse a task completion', function(){
+    ctrl.addTask('A new Task');
+    ctrl.complete(0)
+    ctrl.complete(0)
+    expect(ctrl.tasks[0].completed).toEqual(false)
   });
 });
