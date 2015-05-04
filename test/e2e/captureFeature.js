@@ -11,4 +11,13 @@ describe('capture', function(){
     expect(tasks.get(0).getText()).toEqual('A test Task.');
   });
 
+  it('can show newest items at the top of the list', function(){
+    element(by.model('taskCtrl.loadTask')).sendKeys('A first Task.');
+    element(by.className('form__button--submit')).click();
+    element(by.model('taskCtrl.loadTask')).sendKeys('A second Task.');
+    element(by.className('form__button--submit')).click();
+    var tasks = element.all(by.repeater('task in taskCtrl.tasks'));
+    expect(tasks.get(0).getText()).toEqual('A second Task.');
+  });
+
 });
