@@ -2,7 +2,7 @@
 
 ##Challenge##
 
-Build a Todo list as a mini front-end application. You don't have to use a database, the front-end is more important - you can use an appropriate data structure stored somewhere in your JavaScript (this time only!)
+Wk7 Makers Academy Challenge in AngularJS - Build a Todo list as a mini front-end application. You don't have to use a database, the front-end is more important - you can use an appropriate data structure stored somewhere in your JavaScript (this time only!)
 
 ##User Stories##
 
@@ -30,28 +30,29 @@ So that I only see the relevant tasks
 As a person who doesn't like counting by hand
 I want to see a total number of tasks
 So that I don't have to count
-
-As someone who has done lots of stuff
-I want to be able to clear my completed tasks
-So I never see them again
 ```
 
-MVP Roadmap
+##MVP Roadmap##
 
 - MVP1 - Lists tasks added.
 - MVP2 - Ability to mark tasks as done.
 - MVP3 - MVP3 + styling
 - MVP4 - Filter tasks by "All", "Active" & "Completed"
 - MVP5 - Display total number of tasks
-- MVP6 - Delete completed tasks
 
-Branding
-'Capture' your GTD tasks ready for processing.
+##Setup##
+Firstly ensure you run `npm install` and `bower install` when inside the root directory to ensure you have all the appropriate dependencies.
+###Running Locally###
+Run `http-server` in the terminal to start a simple terminal and then load a localhost in the browser at the location it suggests. Normally `localhost:8080`
 
-For testing
-karma start test/unit/karma.conf.js
-webdriver-manager start
-http-server
+###Testing###
+Feature tests are run in Protractor and Unit tests in Jasmine through Karma.
 
+For Protractor startup webdriver as below then run protractor
+`webdriver-manager start`
+`protractor test/e2e/conf.js`
+
+For karma run
+`karma start test/unit/karma.conf.js`
 
 
