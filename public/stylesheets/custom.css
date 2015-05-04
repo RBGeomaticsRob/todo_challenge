@@ -1,0 +1,13 @@
+.button__submit {
+  width: 15%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0.5em;
+}
+
+#task {
+  width: 100%;
+  margin-bottom: 0.5em;
+  text-align: center;
+}
