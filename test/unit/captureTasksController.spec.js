@@ -21,4 +21,9 @@ describe('CaptureTasksController', function(){
     ctrl.addTask('A new Task');
     expect(ctrl.tasks[0].createdAt).toEqual(Date.now())
   });
+
+  it('can obtain an index to use for class changing', function(){
+    ctrl.selectIndex(1)
+    expect(ctrl.selectedIndex).toEqual(1)
+  });
 });

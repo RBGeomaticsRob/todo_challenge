@@ -39,12 +39,11 @@ So I never see them again
 MVP Roadmap
 
 - MVP1 - Lists tasks added.
-- MVP2 - Ability to change items in the list
-- MVP3 - Ability to mark tasks as done.
-- MVP4 - MVP3 + styling
-- MVP5 - Filter tasks by "All", "Active" & "Completed"
-- MVP6 - Display total number of tasks
-- MVP7 - Delete completed tasks
+- MVP2 - Ability to mark tasks as done.
+- MVP3 - MVP3 + styling
+- MVP4 - Filter tasks by "All", "Active" & "Completed"
+- MVP5 - Display total number of tasks
+- MVP6 - Delete completed tasks
 
 Branding
 'Capture' your GTD tasks ready for processing.

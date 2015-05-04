@@ -25,4 +25,13 @@ describe('capture', function(){
     });
   });
 
+  it('can mark tasks as completed',function(){
+    element(by.model('taskCtrl.loadTask')).sendKeys('A first Task.');
+    element(by.className('form__button--submit')).click();
+    element(by.className('tasks')).click();
+    element.all(by.className('tasks')).then(function(task){
+      expect(task[0].getAttribute('class')).toMatch('strikethrough');
+    });
+  });
+
 });
