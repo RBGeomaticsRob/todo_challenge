@@ -34,4 +34,19 @@ describe('CaptureTasksController', function(){
     ctrl.complete(0)
     expect(ctrl.tasks[0].completed).toEqual(false)
   });
+
+  it('can change to an active filter', function(){
+    ctrl.filterActive();
+    expect(ctrl.taskFilter).toEqual({'completed': false})
+  });
+
+  it('can change to a completed filter', function(){
+    ctrl.filterComplete();
+    expect(ctrl.taskFilter).toEqual({'completed': true})
+  });
+
+  it('can remove task filters', function(){
+    ctrl.filterAll();
+    expect(ctrl.taskFilter).toEqual({})
+  });
 });

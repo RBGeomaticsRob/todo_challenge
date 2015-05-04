@@ -44,4 +44,28 @@ describe('capture', function(){
     });
   });
 
+  it('can display only the active tasks',function(){
+    element(by.model('taskCtrl.loadTask')).sendKeys('A first Task.');
+    element(by.className('form__button--submit')).click();
+    element(by.className('tasks')).click();
+    element(by.className('form__button--active')).click();
+    expect(element(by.css('.tasks')).isPresent()).toBe(false);
+  });
+
+  it('can display only the completed tasks',function(){
+    element(by.model('taskCtrl.loadTask')).sendKeys('A first Task.');
+    element(by.className('form__button--submit')).click();
+    element(by.className('form__button--complete')).click();
+    expect(element(by.css('.tasks')).isPresent()).toBe(false);
+  });
+
+  it('can reset to showing all tasks',function(){
+    element(by.model('taskCtrl.loadTask')).sendKeys('A first Task.');
+    element(by.className('form__button--submit')).click();
+    element(by.className('tasks')).click();
+    element(by.className('form__button--active')).click();
+    element(by.className('form__button--all')).click();
+    expect(element(by.css('.tasks')).isPresent()).toBe(true);
+  });
+
 });
