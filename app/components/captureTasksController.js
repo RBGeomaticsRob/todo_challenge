@@ -3,9 +3,9 @@ app.controller('CaptureTasksController', [function(){
   this.tasks = []
   this.selectedIndex = 0
   this.addTask = function(task){
-    self.tasks.unshift({'desc': task,'createdAt': Date.now()});
+    self.tasks.unshift({'desc': task,'createdAt': Date.now(),'completed': false});
   };
-  this.selectIndex = function($index){
-    self.selectedIndex = $index
+  this.complete = function($index){
+    self.tasks[$index].completed = !self.tasks[$index].completed
   };
 }]);

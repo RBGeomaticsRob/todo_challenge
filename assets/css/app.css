@@ -21,3 +21,7 @@
 .header__lower {
   font-size: 1em
 }
+
+.strikethrough {
+  text-decoration: line-through;
+}

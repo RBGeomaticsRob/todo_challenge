@@ -23,7 +23,8 @@ describe('CaptureTasksController', function(){
   });
 
   it('can obtain an index to use for class changing', function(){
-    ctrl.selectIndex(1)
-    expect(ctrl.selectedIndex).toEqual(1)
+    ctrl.addTask('A new Task');
+    ctrl.complete(0)
+    expect(ctrl.tasks[0].completed).toEqual(true)
   });
 });
