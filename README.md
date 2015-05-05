@@ -41,6 +41,9 @@ So that I don't have to count
 - MVP3 - MVP3 + styling
 - MVP4 - Filter tasks by "All", "Active" & "Completed"
 - MVP5 - Display total number of tasks
+- 
+##Deployed Version##
+A deployed version can be played with [here](https://blooming-bastion-6250.herokuapp.com/). This is being served by a node express server, but does not yet have any persistent storage.
 
 ##Setup##
 Firstly ensure you run `npm install` and `bower install` when inside the root directory to ensure you have all the appropriate dependencies.
