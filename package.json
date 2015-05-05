@@ -2,7 +2,7 @@
   "name": "todo_challenge",
   "version": "1.0.0",
   "description": "##Challenge##",
-  "main": "index.js",
+  "main": "server.js",
   "directories": {
     "test": "tests"
   },
